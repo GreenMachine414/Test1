@@ -130,6 +130,7 @@
                 <div class="header__item"><a id="RPG" class="filter__link filter__link--number" href="#">RPG</a></div>
                 <div class="header__item"><a id="APG" class="filter__link filter__link--number" href="#">APG</a></div>
                 <div class="header__item"><a id="SPG" class="filter__link filter__link--number" href="#">SPG</a></div>
+                <div class="header__item"><a id="FGP" class="filter__link filter__link--number" href="#">FG%</a></div>
             </div>
             <div class="table-content">
                 <div class="table-row">
@@ -138,6 +139,7 @@
                     <div class="table-data">3.2</div>
                     <div class="table-data">5.7</div>
                     <div class="table-data">2.7</div>
+                    <div class="table-data">72%</div>
                 </div>
                 <div class="table-row">
                     <div class="table-data">Dick</div>
@@ -145,6 +147,7 @@
                     <div class="table-data">1</div>
                     <div class="table-data">2</div>
                     <div class="table-data">3</div>
+                    <div class="table-data">50%</div>
                 </div>
                 <div class="table-row">
                     <div class="table-data">Harry</div>
@@ -152,6 +155,7 @@
                     <div class="table-data">2</div>
                     <div class="table-data">2</div>
                     <div class="table-data">2</div>
+                    <div class="table-data">50%</div>
                 </div>
             </div>
         </div>
@@ -161,7 +165,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // JavaScript code for sorting table rows
-        var properties = ['name', 'PPG', 'RPG', 'APG', 'SPG'];
+        var properties = ['name', 'PPG', 'RPG', 'APG', 'SPG', 'FGP'];
 
         $.each(properties, function(i, val) {
             var orderClass = '';
@@ -190,6 +194,11 @@
                 rows.sort(function(a, b) {
                     var x = $(a).find('.table-data').eq(index).text();
                     var y = $(b).find('.table-data').eq(index).text();
+
+                    if (val === 'FG') { // Special case for FG%
+                        x = parseFloat(x.replace('%', ''));
+                        y = parseFloat(y.replace('%', ''));
+                    }
 
                     if (isNumber == true) {
                         if (isSelected) {
