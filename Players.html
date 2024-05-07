@@ -195,7 +195,7 @@
                     var x = $(a).find('.table-data').eq(index).text();
                     var y = $(b).find('.table-data').eq(index).text();
 
-                    if (val === 'FG') { // Special case for FG%
+                    if (val === 'FGP') { // Special case for FG%
                         x = parseFloat(x.replace('%', ''));
                         y = parseFloat(y.replace('%', ''));
                     }
