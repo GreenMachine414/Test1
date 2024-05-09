@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="EAU Image.jpg">
-    <title>EAU Archives</title>
+    <title>KevvinnDurant - Career Stats & Accolades</title>
     <style>
         /* Global Styles */
         body {
@@ -13,13 +13,6 @@
             padding: 0;
             background-color: #f8f8f8;
             color: #333;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         /* Header Styles */
         header {
@@ -52,188 +45,83 @@
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none; /* Remove underline */
-        }
-        /* Hover effect */
-        .back-button:hover {
-            background-color: #000; /* Change background color on hover */
+            text-decoration: none;
         }
         /* Table Styles */
         .container {
-            max-width: 1000px;
-            margin-right: auto;
-            margin-left: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh; /* Adjusted margin-top */
-            margin-top: 0px; /* Adjusted margin-top */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .table {
+        table {
             width: 100%;
-            border: 1px solid #EEEEEE;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-        .table-header {
-            display: flex;
-            width: 100%;
-            background: #000;
-            padding: 12px 0;
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
         }
-        .table-row {
-            display: flex;
-            width: 100%;
-            padding: 12px 0;
-        }
-        .table-row:nth-of-type(odd) {
-            background: #EEEEEE;
-        }
-        .table-data,
-        .header__item {
-            flex: 1 1 20%;
-            text-align: center;
-        }
-        .header__item {
-            text-transform: uppercase;
-        }
-        .filter__link {
-            color: white;
-            text-decoration: none;
-            position: relative;
-            display: inline-block;
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-        .filter__link::after {
-            content: '';
-            position: absolute;
-            right: -12px;
-            color: white;
-            font-size: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .filter__link.desc::after {
-            content: '(desc)';
-        }
-        .filter__link.asc::after {
-            content: '(asc)';
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Players</h1>
-        <!-- Add a button to return to index.html -->
-        <a href="index.html" class="back-button">Back to Home</a>
+        <h1>KevvinnDurant</h1>
+        <a href="Players.html" class="back-button">Back to Players</a>
     </header>
 
-    <!-- Table Content -->
+    <!-- Content Section -->
     <div class="container">
-        <div class="table">
-            <div class="table-header">
-                <div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
-                <div class="header__item"><a id="PPG" class="filter__link filter__link--number" href="#">PPG</a></div>
-                <div class="header__item"><a id="RPG" class="filter__link filter__link--number" href="#">RPG</a></div>
-                <div class="header__item"><a id="APG" class="filter__link filter__link--number" href="#">APG</a></div>
-                <div class="header__item"><a id="SPG" class="filter__link filter__link--number" href="#">SPG</a></div>
-                <div class="header__item"><a id="FGP" class="filter__link filter__link--number" href="#">FG%</a></div>
-            </div>
-            <div class="table-content">
-                <a href="KevvinnDurant.html" class="table-row">
-                    <div class="table-data">KevvinnDurant</div>
-                    <div class="table-data">29.2</div>
-                    <div class="table-data">2.9</div>
-                    <div class="table-data">5.4</div>
-                    <div class="table-data">4.3</div>
-                    <div class="table-data">69%</div>
-                </a>
-                <a href="Flawlessgoodness2alt.html" class="table-row">
-                    <div class="table-data">Flawlessgoodness2alt</div>
-                    <div class="table-data">24.8</div>
-                    <div class="table-data">5.5</div>
-                    <div class="table-data">2.8</div>
-                    <div class="table-data">4.8</div>
-                    <div class="table-data">72%</div>
-                </a>
-                <a href="Teloxz.html" class="table-row">
-                    <div class="table-data">Teloxz</div>
-                    <div class="table-data">21</div>
-                    <div class="table-data">4.4</div>
-                    <div class="table-data">7.3</div>
-                    <div class="table-data">7.3</div>
-                    <div class="table-data">55%</div>
-                </a>
-            </div>
-        </div>
+        <!-- Player Image -->
+        <img src="KevvinnDurant.webp" alt="Player Image" style="width: 200px; height: auto; display: block; margin: 0 auto; border-radius: 50%;">
+
+        <!-- Player Stats Table -->
+        <h2>Season Stats</h2>
+        <table>
+            <tr>
+                <th>Season</th>
+                <th>Team</th>
+                <th>PPG</th>
+                <th>RPG</th>
+                <th>APG</th>
+                <th>SPG</th>
+                <th>FG%</th>
+                <!-- Add more columns for other stats -->
+            </tr>
+            <!-- Add rows for each season -->
+            <tr>
+                <td>S10</td>
+                <td>NOLA</td>
+                <td>46.1</td>
+                <td>2.7</td>
+                <td>5.2</td>
+                <td>4.3</td>
+                <td>73.3</td>
+            </tr>
+            <!-- Repeat rows as needed -->
+        </table>
+
+        <!-- Accolades Section -->
+        <h2>Accolades</h2>
+        <ul>
+            <!-- List accolades here -->
+            <li>OPOTY: S10</li>
+            <li>COTY: S12</li>
+            <li>ALL-EAU 1st Team: S10</li>
+            <li>ALL-EAU 2nd Team: S12</li>
+            <li>ALL-EAU 3rd Team: S9, S14</li>
+            <li>All-Star Game MVP: S12</li>
+            <!-- Add more accolades -->
+        </ul>
     </div>
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // JavaScript code for sorting table rows
-        var properties = ['name', 'PPG', 'RPG', 'APG', 'SPG', 'FGP'];
-
-        $.each(properties, function(i, val) {
-            var orderClass = '';
-
-            $("#" + val).click(function(e) {
-                e.preventDefault();
-                $('.filter__link.filter__link--active').not(this).removeClass('filter__link--active');
-                $(this).toggleClass('filter__link--active');
-                $('.filter__link').removeClass('asc desc');
-
-                if (orderClass == 'desc' || orderClass == '') {
-                    $(this).addClass('asc');
-                    orderClass = 'asc';
-                } else {
-                    $(this).addClass('desc');
-                    orderClass = 'desc';
-                }
-
-                var parent = $(this).closest('.header__item');
-                var index = $(".header__item").index(parent);
-                var $table = $('.table-content');
-                var rows = $table.find('.table-row').get();
-                var isSelected = $(this).hasClass('filter__link--active');
-                var isNumber = $(this).hasClass('filter__link--number');
-
-                rows.sort(function(a, b) {
-                    var x = $(a).find('.table-data').eq(index).text();
-                    var y = $(b).find('.table-data').eq(index).text();
-
-                    if (val === 'FGP') { // Special case for FG%
-                        x = parseFloat(x.replace('%', ''));
-                        y = parseFloat(y.replace('%', ''));
-                    }
-
-                    if (isNumber == true) {
-                        if (isSelected) {
-                            return x - y;
-                        } else {
-                            return y - x;
-                        }
-                    } else {
-                        if (isSelected) {
-                            if (x < y) return -1;
-                            if (x > y) return 1;
-                            return 0;
-                        } else {
-                            if (x > y) return -1;
-                            if (x < y) return 1;
-                            return 0;
-                        }
-                    }
-                });
-
-                $.each(rows, function(index, row) {
-                    $table.append(row);
-                });
-
-                return false;
-            });
-        });
-    </script>
 </body>
 </html>
 
